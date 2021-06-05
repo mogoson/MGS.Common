@@ -1,0 +1,6 @@
+[submodule "CSharpCodeProject"]
+	path = CSharpCodeProject
+	url = https://github.com/mogoson/CSharpCodeProject.git
+[submodule "UnityCodeProject"]
+	path = UnityCodeProject
+	url = https://github.com/mogoson/UnityCodeProject.git
