@@ -50,12 +50,14 @@
             <param name="error"></param>
             <returns></returns>
         </member>
-        <member name="M:MGS.Compress.CompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Compress.CompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
-            Compress entrie[Files or Directories] to dest file async.
+            Compress entrie[files or directories] to dest file async.
             </summary>
-            <param name="entries">Target entrie[Files or Directories].</param>
+            <param name="entries">Target entrie[files or directories].</param>
             <param name="destFile">The dest file.</param>
+            <param name="encoding">Encoding for zip file.</param>
+            <param name="directoryPathInArchive">Directory path in archive of zip file.</param>
             <param name="clearBefor">Clear origin file(if exists) befor compress.</param>
             <param name="progressCallback">Progress callback.</param>
             <param name="completeCallback">Complete callback.</param>
@@ -75,19 +77,21 @@
             Ionic compressor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.IonicCompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Compress.IonicCompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
-            Compress entrie[file or directorie] to dest file.
+            Compress entrie[file or directorie] to dest zip file.
             </summary>
-            <param name="entries">Target entrie[Files or Directories].</param>
+            <param name="entries">Target entrie[files or directories].</param>
             <param name="destFile">The dest file.</param>
+            <param name="encoding">Encoding for zip file.</param>
+            <param name="directoryPathInArchive">Directory path in archive of zip file.</param>
             <param name="clearBefor">Clear origin file(if exists) befor compress.</param>
             <param name="progressCallback">Progress callback.</param>
             <param name="completeCallback">Complete callback.</param>
         </member>
         <member name="M:MGS.Compress.IonicCompressor.Decompress(System.String,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
-            Decompress file to dest dir [Support .zip].
+            Decompress zip file to dest dir.
             </summary>
             <param name="filePath">Target file.</param>
             <param name="destDir">The dest decompress directory.</param>
@@ -110,12 +114,14 @@
             Max run count of async operate.
             </summary>
         </member>
-        <member name="M:MGS.Compress.ICompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Compress.ICompressManager.CompressAsync(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
-            Compress entrie[Files or Directories] to dest file async.
+            Compress entrie[files or directories] to dest file async.
             </summary>
-            <param name="entries">Target entrie[Files or Directories].</param>
+            <param name="entries">Target entrie[files or directories].</param>
             <param name="destFile">The dest file.</param>
+            <param name="encoding">Encoding for zip file.</param>
+            <param name="directoryPathInArchive">Directory path in archive of zip file.</param>
             <param name="clearBefor">Clear origin file(if exists) befor compress.</param>
             <param name="progressCallback">Progress callback.</param>
             <param name="completeCallback">Complete callback.</param>
@@ -135,12 +141,14 @@
             Interface for compressor.
             </summary>
         </member>
-        <member name="M:MGS.Compress.ICompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Compress.ICompressor.Compress(System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
             Compress entrie[file or directorie] to dest file.
             </summary>
-            <param name="entries">Target entrie[Files or Directories].</param>
+            <param name="entries">Target entrie[files or directories].</param>
             <param name="destFile">The dest file.</param>
+            <param name="encoding">Encoding for zip file.</param>
+            <param name="directoryPathInArchive">Directory path in archive of zip file.</param>
             <param name="clearBefor">Clear origin file(if exists) befor compress.</param>
             <param name="progressCallback">Progress callback.</param>
             <param name="completeCallback">Complete callback.</param>
@@ -224,16 +232,18 @@
             File compress task.
             </summary>
         </member>
-        <member name="M:MGS.Compress.CompressTask.#ctor(MGS.Compress.ICompressor,System.Collections.Generic.IEnumerable{System.String},System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
+        <member name="M:MGS.Compress.CompressTask.#ctor(MGS.Compress.ICompressor,System.Collections.Generic.IEnumerable{System.String},System.String,System.Text.Encoding,System.String,System.Boolean,System.Action{System.Single},System.Action{System.Boolean,System.String})">
             <summary>
             Constructor.
             </summary>
             <param name="compressor"></param>
-            <param name="entries"></param>
-            <param name="destFile"></param>
-            <param name="clearBefor"></param>
-            <param name="progressCallback"></param>
-            <param name="completeCallback"></param>
+            <param name="entries">Target entrie[files or directories].</param>
+            <param name="destFile">The dest file.</param>
+            <param name="encoding">Encoding for zip file.</param>
+            <param name="directoryPathInArchive">Directory path in archive of zip file.</param>
+            <param name="clearBefor">Clear origin file(if exists) befor compress.</param>
+            <param name="progressCallback">Progress callback.</param>
+            <param name="completeCallback">Complete callback.</param>
         </member>
         <member name="M:MGS.Compress.CompressTask.Start">
             <summary>
