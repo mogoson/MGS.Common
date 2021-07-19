@@ -19,6 +19,7 @@ namespace MGS.Common.Serialization.Demo
     {
         void Start()
         {
+#if UNITY_5_3_OR_NEWER
             var testList = new List<string>()
             {
                 "A","BB","CCC"
@@ -40,6 +41,9 @@ namespace MGS.Common.Serialization.Demo
 
             var dictionary = JsonUtilityPro.FromJson<int, string>(dicJson);
             Debug.LogFormat("Dictionary from json, item count is {0}", dictionary.Count);
+#else
+            Debug.LogError("JsonUtilityPro can be supported in Unity 5.3 or above.");
+#endif
         }
     }
 }

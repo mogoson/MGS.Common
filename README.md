@@ -24,6 +24,10 @@
 
 ### JsonUtilityPro
 
+- Environment.
+
+  **Unity 5.3 or above**.
+
 - Implemented
 
   ```C#
@@ -35,7 +39,21 @@
 - Usage
 
   ```C#
+  //Serialize List.
+  var list = new List<string>()
+  {
+      "A","BB","CCC"
+  };
+  var json = JsonUtilityPro.ToJson(list);
+  var list = JsonUtilityPro.FromJson<string>(json);
   
+  //Serialize Dictionary.
+  var dic = new Dictionary<int, string>()
+  {
+      { 0,"A"},{1,"BB" },{2,"CCC" }
+  };
+  var json = JsonUtilityPro.ToJson(dic);
+  var dic = JsonUtilityPro.FromJson<int, string>(json);
   ```
   
 
@@ -44,13 +62,30 @@
 - Implemented
 
   ```C#
+  //Dispatcher base main thread; Auto create instance run time.
   public sealed class Dispatcher : MonoBehaviour{}
   ```
 
 - Usage
 
   ```C#
-  
+  var thread = new Thread(() =>
+  {
+      while (isLoop)
+      {
+          Dispatcher.BeginInvoke(() =>
+          {
+              //Run code on main thread.
+              var r = Random.Range(0, 1.0f);
+              var g = Random.Range(0, 1.0f);
+              var b = Random.Range(0, 1.0f);
+              image.color = new Color(r, g, b);
+          });
+          Thread.Sleep(1000);
+      }
+  })
+  { IsBackground = true };
+  thread.Start();
   ```
   
 ## Demo

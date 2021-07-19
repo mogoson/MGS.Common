@@ -92,6 +92,10 @@
 
 - Demos in the path "MGS.Packages/Common/Demo/" provide reference to you.
 
+## Source
+
+- https://github.com/mogoson/MGS.CommonUtility.
+
 ------
 
 Copyright © 2021 Mogoson.	mogoson@outlook.com
