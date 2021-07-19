@@ -19,7 +19,7 @@ namespace MGS.Common.Serialization.Demo
     {
         void Start()
         {
-#if UNITY_5_3_OR_NEWER
+#if UNITY_5_3 || UNITY_5_3_OR_NEWER
             var testList = new List<string>()
             {
                 "A","BB","CCC"
