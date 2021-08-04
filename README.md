@@ -45,6 +45,9 @@
       "A","BB","CCC"
   };
   var json = JsonUtilityPro.ToJson(list);
+  //The json is:
+  //{"source":["A","BB","CCC"]}
+  
   var list = JsonUtilityPro.FromJson<string>(json);
   
   //Serialize Dictionary.
@@ -53,13 +56,11 @@
       { 0,"A"},{1,"BB" },{2,"CCC" }
   };
   var json = JsonUtilityPro.ToJson(dic);
+  //The json is:
+  //json is {"keys":[0,1,2],"values":["A","BB","CCC"]}
+  
   var dic = JsonUtilityPro.FromJson<int, string>(json);
   ```
-
-
-- Preview
-
-  ![JsonUtilityPro](./Attachment/images/JsonUtilityProDemo.png)
 
 ### Dispatcher
 
