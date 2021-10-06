@@ -15,11 +15,6 @@
 
 - Windows
 
-## Implemented
-
-- MGS.Common.dll  [Detail](./UnityProject/Assets/MGS.Packages/Common/Plugins/MGS.Common.md)
-- MGS.UCommon.dll  [Detail](./UnityProject/Assets/MGS.Packages/Common/Plugins/MGS.UCommon.md)
-
 ## Module
 
 ### JsonUtilityPro
