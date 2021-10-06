@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGS.Algorithm</name>
+    </assembly>
+    <members>
+        <member name="T:MGS.Algorithm.PalindromeCollector">
+            <summary>
+            Utility for collect palindrome.
+            </summary>
+        </member>
+        <member name="M:MGS.Algorithm.PalindromeCollector.GetLongestPalindrome(System.String)">
+            <summary>
+            Get lenght of longest palindrome.
+            </summary>
+            <param name="str">Source string.</param>
+            <returns>Lenght of longest palindrome.</returns>
+        </member>
+        <member name="M:MGS.Algorithm.PalindromeCollector.GetLongestPalindrome0(System.String)">
+            <summary>
+            Get lenght of longest palindrome.
+            </summary>
+            <param name="str">Source string.</param>
+            <returns>Lenght of longest palindrome.</returns>
+        </member>
+        <member name="M:MGS.Algorithm.PalindromeCollector.GetTheLongestPalindrome(System.String)">
+            <summary>
+            Get the longest palindrome.
+            </summary>
+            <param name="str">Source string.</param>
+            <returns>The longest palindrome.</returns>
+        </member>
+        <member name="M:MGS.Algorithm.PalindromeCollector.CollectPalindromes(System.String,System.Int32)">
+            <summary>
+            Collect palindromes string.
+            </summary>
+            <param name="str">Source string.</param>
+            <param name="min">Min length of sub palindrome string.</param>
+            <returns>Palindromes string.</returns>
+        </member>
+        <member name="T:MGS.Algorithm.CollectionSearcher">
+            <summary>
+            Utility for collection search.
+            </summary>
+        </member>
+        <member name="M:MGS.Algorithm.CollectionSearcher.BinarySearch``2(``0[],``1,System.Func{``0,``1,System.Int32})">
+            <summary>
+            Binary search the item from array that match the key.
+            </summary>
+            <typeparam name="T">Type of array item.</typeparam>
+            <typeparam name="K">Type of key.</typeparam>
+            <param name="array">Source array (Ordered by key).</param>
+            <param name="key">Key to match item.</param>
+            <param name="compare">Func to compare item and key; return 0 if equal, 1 if greater, -1 if less.</param>
+            <returns>The match item or default of type T if not match.</returns>
+        </member>
+        <member name="T:MGS.Algorithm.WaterCollector">
+            <summary>
+            Utility for collect water.
+            </summary>
+        </member>
+        <member name="M:MGS.Algorithm.WaterCollector.CollectWater(System.Int32[])">
+            <summary>
+            Collect water base the pillars.
+            </summary>
+            <param name="ps">Pillars array.</param>
+            <returns>Water volume.</returns>
+        </member>
+        <member name="M:MGS.Algorithm.WaterCollector.CollectWaters(System.Int32[])">
+            <summary>
+            Collect waters base the pillars.
+            </summary>
+            <param name="ps">Pillars array.</param>
+            <returns>Waters info (index, volume).</returns>
+        </member>
+    </members>
+</doc>

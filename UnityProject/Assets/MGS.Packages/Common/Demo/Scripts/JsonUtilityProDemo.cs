@@ -10,8 +10,10 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_5_3 || UNITY_5_3_OR_NEWER
+using System.Collections.Generic;
+#endif
 
 namespace MGS.Common.Serialization.Demo
 {

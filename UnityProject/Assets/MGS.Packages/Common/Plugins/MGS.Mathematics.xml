@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGS.Mathematics</name>
+    </assembly>
+    <members>
+        <member name="T:MGS.Mathematics.Geometry.Circle">
+            <summary>
+            Circle in plane rectangular coordinate system.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Circle.c">
+            <summary>
+            Center.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Circle.r">
+            <summary>
+            Radius.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Geometry.Circle.Unit">
+            <summary>
+            Unit circle.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Circle.#ctor(MGS.Mathematics.Geometry.Vector2,System.Double)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="c">Center.</param>
+            <param name="r">Radius.</param>
+        </member>
+        <member name="T:MGS.Mathematics.Geometry.GeometryUtility">
+            <summary>
+            Geometry utility.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetDistance(MGS.Mathematics.Geometry.Line,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Gets the distance from line L1 to line L2.
+            </summary>
+            <param name="L1">line L1.</param>
+            <param name="L2">line L2.</param>
+            <returns>The distance from line L1 to line L2.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetDistance(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Gets the distance from vector to line.
+            </summary>
+            <param name="v">Vector.</param>
+            <param name="L">Line.</param>
+            <returns>The distance from vector to line.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetRelation(MGS.Mathematics.Geometry.Circle,MGS.Mathematics.Geometry.Circle)">
+            <summary>
+            Get relation of two circles.
+            </summary>
+            <param name="c1">Circle c1.</param>
+            <param name="c2">Circle c2.</param>
+            <returns>Relation of two circles.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetRelation(MGS.Mathematics.Geometry.Circle,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Get relation of circle and line.
+            </summary>
+            <param name="c">Circle.</param>
+            <param name="L">Line.</param>
+            <returns>Relation of circle and line.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetRelation(MGS.Mathematics.Geometry.Circle,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Get relation of circle and vector.
+            </summary>
+            <param name="c">Circle.</param>
+            <param name="v">Vector.</param>
+            <returns>Relation of circle and vector.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetRelation(MGS.Mathematics.Geometry.Line,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Get relation of two lines.
+            </summary>
+            <param name="L1">Line L1.</param>
+            <param name="L2">Line L2.</param>
+            <returns>Relation of two lines.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetRelation(MGS.Mathematics.Geometry.Line,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Get relation of line and vector.
+            </summary>
+            <param name="L">Line.</param>
+            <param name="v">Vector.</param>
+            <returns>Relation of line and vector.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetIntersections(MGS.Mathematics.Geometry.Line,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Get intersections of two lines.
+            </summary>
+            <param name="L1">Line L1.</param>
+            <param name="L2">Line L2.</param>
+            <returns>Intersection of two lines.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetIntersections(MGS.Mathematics.Geometry.Circle,MGS.Mathematics.Geometry.Circle)">
+            <summary>
+            Get intersections of two circles.
+            </summary>
+            <param name="c1">Circle c1.</param>
+            <param name="c2">Circle c2.</param>
+            <returns>Intersections of two circles.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.GeometryUtility.GetIntersections(MGS.Mathematics.Geometry.Circle,MGS.Mathematics.Geometry.Line)">
+            <summary>
+            Get intersections of circle and line.
+            </summary>
+            <param name="C">Circle.</param>
+            <param name="L">Line.</param>
+            <returns>Intersections of circle and line.</returns>
+        </member>
+        <member name="T:MGS.Mathematics.Geometry.Line">
+            <summary>
+            Line in plane rectangular coordinate system.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Line.k">
+            <summary>
+            Slope of line.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Line.b">
+            <summary>
+            Intercept of line.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Geometry.Line.Horizontal">
+            <summary>
+            Horizontal line (x axis).
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Geometry.Line.Vertical">
+            <summary>
+            Vertical line (y axis).
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Line.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="k">Slope of line.</param>
+            <param name="b">Intercept of line.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Line.FromPoints(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Get the line that pass vector v1 and v2.
+            </summary>
+            <param name="v1">Vector p1.</param>
+            <param name="v2">Vector p2.</param>
+            <returns>The line that pass vector v1 and v2.</returns>
+        </member>
+        <member name="T:MGS.Mathematics.Geometry.Relation">
+            <summary>
+            Position relation.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Undefined">
+            <summary>
+            Undefined relation.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Coincidence">
+            <summary>
+            Coincidence.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.External">
+            <summary>
+            External.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Internal">
+            <summary>
+            Internal.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Parallel">
+            <summary>
+            Parallel.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Vertical">
+            <summary>
+            Vertical.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.Intersect">
+            <summary>
+            Intersect
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.OutsideTangent">
+            <summary>
+            Outside tangent.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Relation.InsideTangent">
+            <summary>
+            Inside tangent.
+            </summary>
+        </member>
+        <member name="T:MGS.Mathematics.Geometry.Vector2">
+            <summary>
+            Vector2 in plane rectangular coordinate system.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Vector2.x">
+            <summary>
+            X of vector.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Geometry.Vector2.y">
+            <summary>
+            Y of vector.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Geometry.Vector2.Zero">
+            <summary>
+            Origin(0,0) of plane rectangular coordinate system.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Geometry.Vector2.One">
+            <summary>
+            Vector(1,1) in plane rectangular coordinate system.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="x">X of vector.</param>
+            <param name="y">Y of vector.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.Equals(System.Object)">
+            <summary>
+            Equals?
+            </summary>
+            <param name="obj">Target obj.</param>
+            <returns>Equals?</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.GetHashCode">
+            <summary>
+            Get hash code.
+            </summary>
+            <returns>Hash code.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.ToString">
+            <summary>
+            To string.
+            </summary>
+            <returns>String.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.Center(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Center of vector v1 and v2.
+            </summary>
+            <param name="v1">Vector v1.</param>
+            <param name="v2">Vector v2.</param>
+            <returns>The center of vector v1 and v2.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.Distance(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Distance from vector v1 to v2.
+            </summary>
+            <param name="v1">Vector v1.</param>
+            <param name="v2">Vector v2.</param>
+            <returns>Distance from vector v1 to v2.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Addition(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator +
+            </summary>
+            <param name="lhs">Vector1.</param>
+            <param name="rhs">Vector2.</param>
+            <returns>lhs+rhs</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Subtraction(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator -
+            </summary>
+            <param name="lhs">Vector1.</param>
+            <param name="rhs">Vector2.</param>
+            <returns>lhs-rhs</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_UnaryNegation(MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator -
+            </summary>
+            <param name="p">Vector</param>
+            <returns>-Vector</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Multiply(MGS.Mathematics.Geometry.Vector2,System.Double)">
+            <summary>
+            Operator *
+            </summary>
+            <param name="lhs">Vector.</param>
+            <param name="rhs">double.</param>
+            <returns>lhs*rhs</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Multiply(System.Double,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator *
+            </summary>
+            <param name="lhs">double.</param>
+            <param name="rhs">Vector.</param>
+            <returns>lhs*rhs</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Equality(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator ==
+            </summary>
+            <param name="lhs">Vector1.</param>
+            <param name="rhs">Vector2.</param>
+            <returns>lhs==rhs?</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Geometry.Vector2.op_Inequality(MGS.Mathematics.Geometry.Vector2,MGS.Mathematics.Geometry.Vector2)">
+            <summary>
+            Operator !=
+            </summary>
+            <param name="lhs">Vector1.</param>
+            <param name="rhs">Vector2.</param>
+            <returns>lhs!=rhs?</returns>
+        </member>
+        <member name="T:MGS.Mathematics.Curve.HermiteCurve">
+            <summary>
+            Piecewise three hermite spline curve.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Curve.HermiteCurve.Item(System.Int32)">
+            <summary>
+            Indexer.
+            </summary>
+            <param name="index">Index of key frame.</param>
+            <returns>The key frame at index.</returns>
+        </member>
+        <member name="F:MGS.Mathematics.Curve.HermiteCurve.frames">
+            <summary>
+            Key frames of curve.
+            </summary>
+        </member>
+        <member name="P:MGS.Mathematics.Curve.HermiteCurve.FramesCount">
+            <summary>
+            Count of key frames.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.#ctor(System.Collections.Generic.IEnumerable{MGS.Mathematics.Curve.KeyFrame})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="frames">Key frames of curve.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.AddFrame(MGS.Mathematics.Curve.KeyFrame)">
+            <summary>
+            Add key frame to curve.
+            </summary>
+            <param name="frame">Key frame to add.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.AddFrame(System.Single,System.Double)">
+            <summary>
+            Add key frame to curve.
+            </summary>
+            <param name="time">Key of frame.</param>
+            <param name="value">Value of frame.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.AddFrames(System.Collections.Generic.IEnumerable{MGS.Mathematics.Curve.KeyFrame})">
+            <summary>
+            Add key frames to curve.
+            </summary>
+            <param name="frames"></param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.RemoveFrame(MGS.Mathematics.Curve.KeyFrame)">
+            <summary>
+            Remove key frame.
+            </summary>
+            <param name="frame">Key frame to remove.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.RemoveFrame(System.Int32)">
+            <summary>
+            Remove key frame at index.
+            </summary>
+            <param name="index">Index of frame.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.ClearFrames">
+            <summary>
+            Clear frames.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.SmoothTangents(System.Single)">
+            <summary>
+            Smooth in and out tangents.
+            </summary>
+            <param name="weight"></param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.SmoothTangents(System.Int32,System.Single)">
+            <summary>
+            Smooth in and out tangents.
+            </summary>
+            <param name="index"></param>
+            <param name="weight"></param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.Evaluate(System.Single)">
+            <summary>
+            Evaluate the curve at t.
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.Evaluate(MGS.Mathematics.Curve.KeyFrame[],System.Single)">
+            <summary>
+            Evaluate the value of hermite curve at time.
+            </summary>
+            <param name="frames">Key frames of hermite curve.</param>
+            <param name="t"></param>
+            <returns>The value of hermite curve at time.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.Evaluate(MGS.Mathematics.Curve.KeyFrame,MGS.Mathematics.Curve.KeyFrame,System.Single)">
+            <summary>
+            Evaluate the value of hermite curve at time on the range from start key frame to end key frame.
+            </summary>
+            <param name="start">Start Key frame of hermite curve.</param>
+            <param name="end">End Key frame of hermite curve.</param>
+            <param name="t">Time of curve to evaluate value.</param>
+            <returns>The value of hermite curve at time on the range from start key frame to end key frame.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.HermiteCurve.Evaluate(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Single)">
+            <summary>
+            Hermite interpolate between t0 and t1 by t.
+            </summary>
+            <param name="t0">Time of t0.</param>
+            <param name="v0">Value of t0.</param>
+            <param name="m0">Micro quotient value of t0.</param>
+            <param name="t1">Time of t1.</param>
+            <param name="v1">Value of t1.</param>
+            <param name="m1">Micro quotient value of t1.</param>
+            <param name="t">t is between t0 and t1.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.Mathematics.Curve.KeyFrame">
+            <summary>
+            Key frame base on time and value.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Curve.KeyFrame.time">
+            <summary>
+            Time of key frame.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Curve.KeyFrame.value">
+            <summary>
+            Value of key frame.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Curve.KeyFrame.inTangent">
+            <summary>
+            In tangent of key frame.
+            </summary>
+        </member>
+        <member name="F:MGS.Mathematics.Curve.KeyFrame.outTangent">
+            <summary>
+            Out tangent of key frame.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.KeyFrame.#ctor(System.Double,System.Double)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="time">Time of key frame.</param>
+            <param name="value">Value of key frame.</param>
+        </member>
+        <member name="M:MGS.Mathematics.Curve.KeyFrame.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="time">Time of key frame.</param>
+            <param name="value">Value of key frame.</param>
+            <param name="inTangent">In tangent of key frame.</param>
+            <param name="outTangent">Out tangent of key frame.</param>
+        </member>
+        <member name="T:MGS.Mathematics.Unility.MathInterpolator">
+            <summary>
+            Interpolator base mathematical methods.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathInterpolator.Lerp(System.Double,System.Double,System.Double)">
+            <summary>
+            Interpolate between p0 and p1 by t.
+            </summary>
+            <param name="p0">Start value of interpolate value.</param>
+            <param name="p1">End value of interpolate value.</param>
+            <param name="t">t is between 0 and 1.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathInterpolator.Bezier(System.Double,System.Double,System.Double)">
+            <summary>
+            Linear bezier interpolate from p0 to p1 by t.
+            </summary>
+            <param name="p0">Start value of interpolate value.</param>
+            <param name="p1">End value of interpolate value.</param>
+            <param name="t">t is between 0 and 1.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathInterpolator.Bezier(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Quadratic bezier interpolate from p0 to p1 base t0 by t.
+            </summary>
+            <param name="p0"></param>
+            <param name="p1"></param>
+            <param name="t0"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathInterpolator.Bezier(System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Cubic bezier interpolate from p0 to p1 base t0 and t1 by t.
+            </summary>
+            <param name="p0"></param>
+            <param name="p1"></param>
+            <param name="t0"></param>
+            <param name="t1"></param>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathInterpolator.Hermite(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Hermite interpolate between t0 and t1 by t.
+            </summary>
+            <param name="t0">Time of t0.</param>
+            <param name="v0">Value of t0.</param>
+            <param name="m0">Micro quotient value of t0.</param>
+            <param name="t1">Time of t1.</param>
+            <param name="v1">Value of t1.</param>
+            <param name="m1">Micro quotient value of t1.</param>
+            <param name="t">t is between t0 and t1.</param>
+            <returns></returns>
+        </member>
+        <member name="T:MGS.Mathematics.Unility.MathSmoother">
+            <summary>
+            Math smoother base mathematical methods.
+            </summary>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.ThreePointLinear(System.Double[])">
+            <summary>
+            Three point linear smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.FivePointLinear(System.Double[])">
+            <summary>
+            Five point linear smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.SevenPointLinear(System.Double[])">
+            <summary>
+            Seven point linear smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.FivePointQuadratic(System.Double[])">
+            <summary>
+            Five point quadratic smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.SevenPointQuadratic(System.Double[])">
+            <summary>
+            Seven point quadratic smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.FivePointCubic(System.Double[])">
+            <summary>
+            Five point cubic smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+        <member name="M:MGS.Mathematics.Unility.MathSmoother.SevenPointCubic(System.Double[])">
+            <summary>
+            Seven point cubic smooth.
+            </summary>
+            <param name="s">Data source.</param>
+            <returns>Smooth result.</returns>
+        </member>
+    </members>
+</doc>
