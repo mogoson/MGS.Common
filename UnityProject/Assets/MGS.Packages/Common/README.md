@@ -6,6 +6,10 @@
 
 - Common code for C# and Unity project develop.
 
+## Version
+
+- 1.1.0
+
 ## Environment
 
 - Unity 5.3 or above.
