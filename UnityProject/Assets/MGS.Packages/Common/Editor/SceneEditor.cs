@@ -18,7 +18,7 @@ using UnityEngine;
 using UnityEditor.SceneManagement;
 #endif
 
-namespace MGS.Common.UEditor
+namespace MGS.Common.Editors
 {
     public class SceneEditor : Editor
     {
